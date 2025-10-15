@@ -1,43 +1,497 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria Flexbox Simples</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coringa — Perfil Temático (Sombrio & Realista)</title>
+    <meta name="description" content="Site temático do Coringa — estilo sombrio e realista. Galeria, biografia, citações e linha do tempo criada com HTML e CSS (Flexbox)."/>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="header">
-        <h1>Galeria Flexbox</h1>
-        <p>Um layout simples e responsivo para Flexbox</p>
+    <!-- ======================================================
+        HEADER
+        ====================================================== -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <div class="logo" aria-label="Logo Coringa">
+                <span class="logo-mark">J</span>
+                <span class="logo-text">THE JOKER</span>
+            </div>
+
+            <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Biografia</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#quotes">Frases</a></li>
+                    <li><a href="#timeline">Linha do Tempo</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <span class="badge">Fan Site • Estudo CSS</span>
+            </div>
+        </div>
     </header>
 
-    <main class="container">
-        <!-- 20 ELEMENTOS (CARDS) -->
-        <div class="card">1</div>
-        <div class="card">2</div>
-        <div class="card">3</div>
-        <div class="card">4</div>
-        <div class="card">5</div>
-        <div class="card">6</div>
-        <div class="card">7</div>
-        <div class="card">8</div>
-        <div class="card">9</div>
-        <div class="card">10</div>
-        <div class="card">11</div>
-        <div class="card">12</div>
-        <div class="card">13</div>
-        <div class="card">14</div>
-        <div class="card">15</div>
-        <div class="card">16</div>
-        <div class="card">17</div>
-        <div class="card">18</div>
-        <div class="card">19</div>
-        <div class="card">20</div>
+    <!-- ======================================================
+        HERO / BANNER PRINCIPAL
+        ====================================================== -->
+    <section id="home" class="hero" role="region" aria-label="Banner principal">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1 class="hero-title">"Por que tão sério?"</h1>
+                <p class="hero-subtitle">
+                    Um olhar profundo no personagem. Estudo visual e estrutural inspirado no Coringa — interpretação sombria e realista.
+                </p>
+            </div>
+
+            <figure class="hero-figure" aria-hidden="true">
+                <!-- figura decorativa: será estilizada com CSS (gradientes e máscara) -->
+                <figcaption class="sr-only">Ilustração estilizada do Coringa (decorativa).</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ======================================================
+        SOBRE / BIOGRAFIA
+        ====================================================== -->
+    <main id="main" role="main">
+        <section id="about" class="about" role="article" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title">Biografia e Interpretação</h2>
+
+                <div class="about-grid">
+                    <article class="about-card">
+                        <h3>Origens</h3>
+                        <p>
+                            O Coringa é um dos antagonistas mais icônicos dos quadrinhos e do cinema. Sua origem varia entre versões,
+                            mas consistentemente ele representa o caos e a subversão das normas sociais. Nesta interpretação, buscamos
+                            a faceta humana, perturbada e complexa — mais realista e menos caricata.
+                        </p>
+                        <p>
+                            Este site explora o personagem a partir de aspectos visuais e narrativos, com foco em tipografia, paleta de
+                            cores e layout que reforçam uma estética tensa e claustrofóbica.
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>Personalidade</h3>
+                        <p>
+                            Astuto, cínico e imprevisível — sua presença força outras personagens a reagirem e mostrarem suas próprias
+                            falhas. A construção do Coringa em filmes modernos geralmente aposta em nuances psicológicas e em performances
+                            que equilibram humor e violência.
+                        </p>
+                        <ul class="traits-list">
+                            <li>Manipulador</li>
+                            <li>Caótico</li>
+                            <li>Carismático</li>
+                            <li>Inquietante</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>Estética</h3>
+                        <p>
+                            Paleta: roxos escuros, verdes sujos, pretos e toques de vermelho — elementos que comunicam decadência e
+                            intensidade emocional. Tipografia pesada para títulos e serifas sutis para texto longo.
+                        </p>
+                        <p>
+                            A iluminação contrastada e sombras profundas são recursos utilizados para amplificar o efeito dramático.
+                        </p>
+                    </article>
+
+                    <article class="about-card">
+                        <h3>Referências</h3>
+                        <p>
+                            Inspirações: filmes como "The Dark Knight" (interpretação mais realista) e "Joker" (estudo psicológico),
+                            bem como HQs que exploram o personagem em diferentes tons.
+                        </p>
+                        <p class="small-note">Obs: Este é um projeto de estudo e homenagem — não um produto oficial da DC Comics.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+            GALERIA — 20 ELEMENTOS
+            ====================================================== -->
+        <section id="gallery" class="gallery" role="region" aria-labelledby="gallery-title">
+            <div class="container">
+                <h2 id="gallery-title">Galeria — Estudos Visuais</h2>
+                <p class="gallery-intro">
+                    Coleção de imagens e estudos visuais. As imagens são representadas por cards estilizados (nesta versão sem imagens reais,
+                    usamos backgrounds e captions). Cada card possui padding, border e margem definidos.
+                </p>
+
+                <div class="gallery-grid" aria-live="polite">
+                    <!-- 20 cards com imagens ilustrativas -->
+                    <div class="card"> <!-- 1 -->
+                        <div class="card-media" role="img" aria-label="Estudo 1">
+                            <img src="imagens/joker1.jpg" alt="Estudo 01 - Close-up: olhar e maquiagem" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 01</h4>
+                            <p>Close-up: olhar e maquiagem.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 2 -->
+                        <div class="card-media" role="img" aria-label="Estudo 2">
+                            <img src="imagens/joker2.jpg" alt="Estudo 02 - Contraste e sombras" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 02</h4>
+                            <p>Contraste e sombras.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 3 -->
+                        <div class="card-media" role="img" aria-label="Estudo 3">
+                            <img src="imagens/joker3.jpg" alt="Estudo 03 - Paleta roxo/verde" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 03</h4>
+                            <p>Paleta roxo/verde.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 4 -->
+                        <div class="card-media" role="img" aria-label="Estudo 4">
+                            <img src="imagens/joker4.jpg" alt="Estudo 04 - Texturas e sujeira de maquiagem" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 04</h4>
+                            <p>Texturas e sujeira de maquiagem.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 5 -->
+                        <div class="card-media" role="img" aria-label="Estudo 5">
+                            <img src="imagens/joker5.jpg" alt="Estudo 05 - Iluminação lateral" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 05</h4>
+                            <p>Iluminação lateral.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 6 -->
+                        <div class="card-media" role="img" aria-label="Estudo 6">
+                            <img src="imagens/joker6.jpg" alt="Estudo 06 - Maquiagem borrada" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 06</h4>
+                            <p>Maquiagem borrada.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 7 -->
+                        <div class="card-media" role="img" aria-label="Estudo 7">
+                            <img src="imagens/joker7.jpg" alt="Estudo 07 - Expressão forçada" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 07</h4>
+                            <p>Expressão forçada.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 8 -->
+                        <div class="card-media" role="img" aria-label="Estudo 8">
+                            <img src="imagens/joker8.jpg" alt="Estudo 08 - Roupa e textura" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 08</h4>
+                            <p>Roupa e textura.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 9 -->
+                        <div class="card-media" role="img" aria-label="Estudo 9">
+                            <img src="imagens/joker9.jpg" alt="Estudo 09 - Composição de quadro" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 09</h4>
+                            <p>Composição de quadro.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 10 -->
+                        <div class="card-media" role="img" aria-label="Estudo 10">
+                            <img src="imagens/joker10.jpg" alt="Estudo 10 - Sombras profundas" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 10</h4>
+                            <p>Sombras profundas.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 11 -->
+                        <div class="card-media" role="img" aria-label="Estudo 11">
+                            <img src="imagens/joker11.jpg" alt="Estudo 11 - Close no sorriso" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 11</h4>
+                            <p>Close no sorriso.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 12 -->
+                        <div class="card-media" role="img" aria-label="Estudo 12">
+                            <img src="imagens/joker12.jpg" alt="Estudo 12 - Retrato em baixo contraste" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 12</h4>
+                            <p>Retrato em baixo contraste.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 13 -->
+                        <div class="card-media" role="img" aria-label="Estudo 13">
+                            <img src="imagens/joker13.jpg" alt="Estudo 13 - Relevo e textura" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 13</h4>
+                            <p>Relevo e textura.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 14 -->
+                        <div class="card-media" role="img" aria-label="Estudo 14">
+                            <img src="imagens/joker14.jpg" alt="Estudo 14 - Sombra de ambiente urbano" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 14</h4>
+                            <p>Sombra de ambiente urbano.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 15 -->
+                        <div class="card-media" role="img" aria-label="Estudo 15">
+                            <img src="imagens/joker15.jpg" alt="Estudo 15 - Detalhe em acessórios" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 15</h4>
+                            <p>Detalhe em acessórios.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 16 -->
+                        <div class="card-media" role="img" aria-label="Estudo 16">
+                            <img src="imagens/joker16.jpg" alt="Estudo 16 - Enquadramento cinematográfico" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 16</h4>
+                            <p>Enquadramento cinematográfico.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 17 -->
+                        <div class="card-media" role="img" aria-label="Estudo 17">
+                            <img src="imagens/joker17.jpg" alt="Estudo 17 - Expressão corporal" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 17</h4>
+                            <p>Expressão corporal.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 18 -->
+                        <div class="card-media" role="img" aria-label="Estudo 18">
+                            <img src="imagens/joker18.jpg" alt="Estudo 18 - Composição dramática" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 18</h4>
+                            <p>Composição dramática.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 19 -->
+                        <div class="card-media" role="img" aria-label="Estudo 19">
+                            <img src="imagens/joker19.jpg" alt="Estudo 19 - Tonalidade fria com contraste" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 19</h4>
+                            <p>Tonalidade fria com contraste.</p>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- 20 -->
+                        <div class="card-media" role="img" aria-label="Estudo 20">
+                            <img src="imagens/joker20.jpg" alt="Estudo 20 - Retrato final — síntese visual" class="gallery-img" />
+                        </div>
+                        <div class="card-body">
+                            <h4>Estudo 20</h4>
+                            <p>Retrato final — síntese visual.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+            FRASES ICÔNICAS
+            ====================================================== -->
+        <section id="quotes" class="quotes" role="region" aria-labelledby="quotes-title">
+            <div class="container">
+                <h2 id="quotes-title">Frases e Afirmações</h2>
+                <p class="quotes-intro">Compilação de trechos e frases que capturam a essência do personagem — usadas aqui como estudo tipográfico.</p>
+
+                <div class="quotes-grid">
+                    <blockquote class="quote">
+                        <p>“Why so serious?”</p>
+                        <cite>— The Joker</cite>
+                    </blockquote>
+
+                    <blockquote class="quote">
+                        <p>“Introduce a little anarchy. Upset the established order, and everything becomes chaos.”</p>
+                        <cite>— The Joker</cite>
+                    </blockquote>
+
+                    <blockquote class="quote">
+                        <p>“We stopped checking for monsters under our bed when we realized they were inside us.”</p>
+                        <cite>— Interpretação</cite>
+                    </blockquote>
+
+                    <blockquote class="quote">
+                        <p>“If you’re good at something, never do it for free.”</p>
+                        <cite>— The Joker</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+            LINHA DO TEMPO
+            ====================================================== -->
+        <section id="timeline" class="timeline" role="region" aria-labelledby="timeline-title">
+            <div class="container">
+                <h2 id="timeline-title">Linha do Tempo — Momentos Chave</h2>
+                <p class="timeline-intro">Eventos fictícios e marcos usados como esqueleto para um narrativo resumido.</p>
+
+                <div class="timeline-list">
+                    <article class="event">
+                        <span class="event-date">1985</span>
+                        <div class="event-body">
+                            <h4>Primeiros sinais</h4>
+                            <p>Traços de comportamento atípico e isolamento. Um período que marca o início de transformações pessoais.</p>
+                        </div>
+                    </article>
+
+                    <article class="event">
+                        <span class="event-date">1992</span>
+                        <div class="event-body">
+                            <h4>Queda</h4>
+                            <p>Uma série de perdas cruciais que abalam a identidade do personagem.</p>
+                        </div>
+                    </article>
+
+                    <article class="event">
+                        <span class="event-date">2001</span>
+                        <div class="event-body">
+                            <h4>Ascensão</h4>
+                            <p>Consolidação de uma persona que desafia normas e cria caos para provocar reações.</p>
+                        </div>
+                    </article>
+
+                    <article class="event">
+                        <span class="event-date">2012</span>
+                        <div class="event-body">
+                            <h4>Confronto público</h4>
+                            <p>Incidentes na cidade que colocam o antagonista em evidência e revelam facetas sombrias da sociedade.</p>
+                        </div>
+                    </article>
+
+                    <article class="event">
+                        <span class="event-date">2019</span>
+                        <div class="event-body">
+                            <h4>Retrospectiva</h4>
+                            <p>Uma análise crítica sobre responsabilidade, mídia e espetacularização da violência.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+            SEÇÃO DE RECURSOS / NOTAS DO DESIGN
+            ====================================================== -->
+        <section id="design-notes" class="design-notes" role="article" aria-labelledby="design-notes-title">
+            <div class="container">
+                <h2 id="design-notes-title">Notas de Design e Acessibilidade</h2>
+
+                <div class="notes-grid">
+                    <div class="note">
+                        <h4>Semântica</h4>
+                        <p>Uso de tags <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> e <code>&lt;footer&gt;</code> para estruturar o conteúdo.</p>
+                    </div>
+
+                    <div class="note">
+                        <h4>Acessibilidade</h4>
+                        <p>Contraste de cores e fallback tipográfico. Alternativas textuais para imagens decorativas e uso de roles quando necessário.</p>
+                    </div>
+
+                    <div class="note">
+                        <h4>Responsividade</h4>
+                        <p>Layout baseado em Flexbox e media queries para adaptar a grade e os cards em telas menores.</p>
+                    </div>
+
+                    <div class="note">
+                        <h4>Extensibilidade</h4>
+                        <p>Classes modulares e nomes claros para facilitar futuras adições (por exemplo: adicionar JS, formulários ou animações).</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======================================================
+            CONTATO (fictício)
+            ====================================================== -->
+        <section id="contact" class="contact" role="region" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">Contato (Fictício)</h2>
+                <p>Se você fosse um pesquisador ou fã e quisesse colaborar, aqui estão os contatos fictícios e redes.</p>
+
+                <div class="contact-grid">
+                    <div class="contact-card contact-form">
+                        <h4>Mensagem Rápida</h4>
+                        <!-- Formulário visual apenas -->
+                        <form action="#" method="post" aria-label="Formulário fictício de contato">
+                            <label>
+                                Nome
+                                <input type="text" name="name" placeholder="Seu nome" />
+                            </label>
+
+                            <label>
+                                Email
+                                <input type="email" name="email" placeholder="seu@email.com" />
+                            </label>
+
+                            <label>
+                                Mensagem
+                                <textarea name="message" rows="4" placeholder="Mensagem (fictícia)"></textarea>
+                            </label>
+
+                            <button type="submit" class="btn">Enviar (não funcional)</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer">
-        <p>Desenvolvido para Tarefa 07 de WebDesign | Projeto Flexbox</p>
+    <!-- ======================================================
+        FOOTER
+        ====================================================== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <p>© 2025 — Projeto de WebDesign. Conteúdo não oficial. Personagem de propriedade da DC Comics.</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
